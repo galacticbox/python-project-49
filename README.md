@@ -3,3 +3,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/39166e71281a7e6f86bc/maintainability)](https://codeclimate.com/github/galacticbox/python-project-49/maintainability)
 [![asciicast](https://asciinema.org/a/m1pSZXuga2JGKeQiFGuX30lBQ.svg)](https://asciinema.org/a/m1pSZXuga2JGKeQiFGuX30lBQ)
 [![asciicast](https://asciinema.org/a/vuNroc57BVB2qhXHVfxV0dqoI.svg)](https://asciinema.org/a/vuNroc57BVB2qhXHVfxV0dqoI)
+[![asciicast](https://asciinema.org/a/q2Nhr7ttcBzlXkc3T66RY3Kpt.svg)](https://asciinema.org/a/q2Nhr7ttcBzlXkc3T66RY3Kpt)
