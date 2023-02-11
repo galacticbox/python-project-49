@@ -19,5 +19,5 @@ def answering(computer, user):
         return True
     else:
         print(f'"{user}" is wrong answer ;(. Correct answer was "{computer}"')
-        print(f"Let's try again, {name}")
+        print(f"Let's try again, {name}!")
         return False
