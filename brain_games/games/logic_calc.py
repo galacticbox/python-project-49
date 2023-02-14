@@ -1,10 +1,9 @@
 from random import randint, choice
-from brain_games.common_logic import answering, winning
+from brain_games.common_logic import solve, win
+from brain_games.constants import CALC_SIGN, RANGE_STOP, RANGE_START
 
-calc_sign = ['+', '-', '*']
 
-
-def is_calc(x, y, z):
+def calculate(x, y, z):
     if z == '+':
         return x + y
     elif z == '-':
@@ -15,13 +14,13 @@ def is_calc(x, y, z):
 
 def game_calc():
     for _ in range(3):
-        number_1 = randint(1, 20)
-        number_2 = randint(1, 20)
-        calc = choice(calc_sign)
+        number_1 = randint(RANGE_START, RANGE_STOP)
+        number_2 = randint(RANGE_START, RANGE_STOP)
+        calc = choice(CALC_SIGN)
         print(f'Question: {number_1} {calc} {number_2}')
         answer = int(input('Your answer: '))
-        result = answering(is_calc(number_1, number_2, calc), answer)
-        if result is False:
+        result = solve(calculate(number_1, number_2, calc), answer)
+        if not result:
             break
-    if result is True:
-        winning()
+    if result:
+        win()

@@ -1,4 +1,5 @@
 import prompt
+from brain_games.constants import YES, NO
 
 
 def welcome_user():
@@ -9,15 +10,21 @@ def welcome_user():
     return name
 
 
-def winning():
+def convert_bool(x):
+    if x is True:
+        return YES
+    elif x is False:
+        return NO
+
+
+def win():
     print(f'Congratulations, {name}!')
 
 
-def answering(computer, user):
-    if computer == user:
+def solve(real_answer, user_answer):
+    if real_answer == user_answer:
         print('Correct!')
         return True
-    else:
-        print(f'"{user}" is wrong answer ;(. Correct answer was "{computer}"')
-        print(f"Let's try again, {name}!")
-        return False
+    print(f'"{user_answer}" is wrong answer ;(. Correct answer was "{real_answer}"')
+    print(f"Let's try again, {name}!")
+    return False
