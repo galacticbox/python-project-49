@@ -21,10 +21,10 @@ def win():
     print(f'Congratulations, {name}!')
 
 
-def solve(real_answer, user_answer):
-    if real_answer == user_answer:
+def solve(real_ans, user_ans):
+    if real_ans == user_ans:
         print('Correct!')
         return True
-    print(f'"{user_answer}" is wrong answer ;(. Correct answer was "{real_answer}"')
+    print(f'"{user_ans}" is wrong answer ;(. Correct answer was "{real_ans}"')
     print(f"Let's try again, {name}!")
     return False
