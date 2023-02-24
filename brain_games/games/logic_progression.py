@@ -12,4 +12,5 @@ def game_prog():
     missing_num_index = randint(1, len(question) - 1)
     correct_answer = question.pop(missing_num_index)
     question.insert(missing_num_index, '..')
+    question = ' '.join(str(i) for i in question)
     return question, str(correct_answer)
