@@ -30,5 +30,4 @@ def game(game_rules, game_question):
         result = solve(y, answer, name)
         if result is False:
             break
-    if result is True:
-        print(f'Congratulations, {name}!')
+    print(f'Congratulations, {name}!')
