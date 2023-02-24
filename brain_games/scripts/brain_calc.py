@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.games.logic_calc import game_calc
-from brain_games.common_logic import welcome_user
+from brain_games.games.logic_calc import game_calc, game_rules
+from brain_games.common_logic import game
 
 
 def main():
-    welcome_user()
-    print('What is the result of the expression?')
-    game_calc()
+    game(game_rules, game_calc)
     pass
 
 

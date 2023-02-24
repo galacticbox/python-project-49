@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.games.logic_progression import game_prog
-from brain_games.common_logic import welcome_user
+from brain_games.games.logic_progression import game_rules, game_prog
+from brain_games.common_logic import game
 
 
 def main():
-    welcome_user()
-    print('What number is missing in the progression?')
-    game_prog()
+    game(game_rules, game_prog)
     pass
 
 

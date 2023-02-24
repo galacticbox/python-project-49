@@ -1,29 +1,15 @@
 from random import randint
-from brain_games.common_logic import solve, win
 
 
-def make_progression():
-    step = randint(2, 5)
-    start = randint(1, 10)
-    stop = randint(40, 70)
-    lis = [i for i in range(start, stop, step)]
-    return lis
-
-
-def make_missing_number(lis):
-    missing_num_index = randint(1, len(lis) - 1)
-    answer_num = lis.pop(missing_num_index)
-    lis.insert(missing_num_index, '..')
-    return answer_num, lis
+game_rules = 'What number is missing in the progression?'
 
 
 def game_prog():
-    for _ in range(3):
-        answer_num, lis = make_missing_number(make_progression())
-        print('Question:', *lis, sep=' ')
-        answer = int(input('Your answer: '))
-        result = solve(answer_num, answer)
-        if result is False:
-            break
-    if result is True:
-        win()
+    step = randint(2, 5)
+    start = randint(1, 10)
+    stop = randint(40, 70)
+    question = [i for i in range(start, stop, step)]
+    missing_num_index = randint(1, len(question) - 1)
+    correct_answer = question.pop(missing_num_index)
+    question.insert(missing_num_index, '..')
+    return question, str(correct_answer)

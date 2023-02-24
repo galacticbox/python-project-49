@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.games.logic_gcd import game_gcd
-from brain_games.common_logic import welcome_user
+from brain_games.games.logic_gcd import game_rules, game_gcd
+from brain_games.common_logic import game
 
 
 def main():
-    welcome_user()
-    print('Find the greatest common divisor of given numbers.')
-    game_gcd()
+    game(game_rules, game_gcd)
     pass
 
 
