@@ -1,16 +1,9 @@
 import prompt
-from brain_games.constants import YES, NO, TRIES
-
-
-def convert_bool(x):
-    if x is True:
-        return YES
-    elif x is False:
-        return NO
+from brain_games.constants import TRIES
 
 
 def solve(real_ans, user_ans, name):
-    if real_ans == user_ans:
+    if real_ans.lower() == user_ans.lower():
         print('Correct!')
         return True
     print(f'"{user_ans}" is wrong answer ;(. Correct answer was "{real_ans}"')
@@ -18,16 +11,16 @@ def solve(real_ans, user_ans, name):
     return False
 
 
-def game(game_rules, game_question):
+def game(GAME_RULES, game_logic):
     print("Welcome to the Brain Games!")
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    print(game_rules)
+    print(GAME_RULES)
     for _ in range(TRIES):
-        x, y = game_question()
-        print('Question:', x)
-        answer = input('Your answer: ')
-        result = solve(y, answer, name)
-        if result is False:
-            break
+        game_question, game_answer = game_logic()
+        print('Question:', game_question)
+        answer = prompt.string('Your answer: ')
+        result = solve(str(game_answer), answer, name)
+        if not result:
+            return
     print(f'Congratulations, {name}!')

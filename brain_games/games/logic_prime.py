@@ -1,8 +1,7 @@
 from random import randint
-from brain_games.common_logic import convert_bool
 from brain_games.constants import RANGE_START, RANGE_STOP_MAX
 
-game_rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(x):
@@ -12,5 +11,5 @@ def is_prime(x):
 
 def game_prime():
     given_number = randint(RANGE_START, RANGE_STOP_MAX)
-    correct_answer = convert_bool(is_prime(given_number))
-    return given_number, correct_answer
+    correct_answer = is_prime(given_number)
+    return given_number, correct_answer and 'yes' or 'no'

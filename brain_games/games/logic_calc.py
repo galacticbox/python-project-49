@@ -1,7 +1,7 @@
 from random import randint, choice
 from brain_games.constants import CALC_SIGN, RANGE_STOP, RANGE_START
 
-game_rules = 'What is the result of the expression?'
+GAME_RULES = 'What is the result of the expression?'
 
 
 def calculate(x, y, z):
@@ -19,4 +19,4 @@ def game_calc():
     calc = choice(CALC_SIGN)
     question = f'{number_1} {calc} {number_2}'
     correct_answer = calculate(number_1, number_2, calc)
-    return question, str(correct_answer)
+    return question, correct_answer

@@ -1,7 +1,7 @@
 from random import randint
 
 
-game_rules = 'What number is missing in the progression?'
+GAME_RULES = 'What number is missing in the progression?'
 
 
 def game_prog():
@@ -13,4 +13,4 @@ def game_prog():
     correct_answer = question.pop(missing_num_index)
     question.insert(missing_num_index, '..')
     question = ' '.join(str(i) for i in question)
-    return question, str(correct_answer)
+    return question, correct_answer
